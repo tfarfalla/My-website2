@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+  /* border: 2px solid greenyellow; */
+}
+
+.imgs{
+  position: relative;
+  z-index: 1;
+}
+
+.imgcover{
+  position: relative;
+  z-index: 1;
+}
+
+.imgcover:hover{
+  z-index: 999;
+}
+
+.video{
+  mix-blend-mode: difference;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  cursor: move;
+}
+
+.images {
+   /*cursor:grab;*/
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* height: 100vh; */
+  height: 100%;
+}
+
+.content {
+  position: absolute;
+  padding: 30px;
+  left: 0;
+  bottom: 0;
+}
+
+ul li a {
+  cursor: move;
+}
+
+.nav {
+  z-index: 9999999;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100vw;
+  padding: 30px;
+  justify-content: space-between;
+}
+
+.right ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.text p{
+  width: 100vw;
+  height: 100vh;
+  padding: 100px;
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  background-color: rgb(208, 25, 25);
+  color: black;
+  font-size: 30px;
+  transition: opacity 0.8s ease-in-out; 
+}
+
+.close{
+  opacity: 0%;
+}
+
+.open{
+  opacity: 100%;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  height: 100px;
+}
+
+.maindiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+@media screen and (max-width: 480px){
+  .text p{
+    font-size: 16px;
+    height: 100%;
+    padding: 90px 10px;
+  }
+}
+
